@@ -1,16 +1,21 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
+import Html  from "./icons/Html.astro"
+import Astro from "./icons/AstroIco.astro"
 import Figma from "./icons/Figma.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#FF5D01] text-white",
+    icon: Astro,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#E34F26] text-white",
+    icon: Html,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -29,24 +34,23 @@ const PROJECTS = [
     description:
       "Landing page para Code Liance, una empresa de desarrollo de software. Optimizada para SEO y rendimiento.",
     link: "https://codeliance.netlify.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.FIGMA, TAGS.TAILWIND],
+    image: "/projects/codeliance.webp",
+    tags: [TAGS.HTML, TAGS.FIGMA, TAGS.TAILWIND],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Portfolio - Sinisini29",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Mi portafolio personal, diseñado para mostrar mis proyectos y habilidades. Utiliza Tailwind CSS y Figma.",
+    link: "#",
+    image: "/projects/portafolio.webp",
+    tags: [ TAGS.HTML, TAGS.FIGMA,TAGS.TAILWIND],
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -74,13 +78,6 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
