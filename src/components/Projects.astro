@@ -1,6 +1,7 @@
 ---
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import Figma from "./icons/Figma.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
@@ -16,16 +17,21 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-}
+  FIGMA: {
+    name: "Figma",
+    class: "bg-[#F24E1E] text-white",
+    icon: Figma,
+  },
+};
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Landing Page - Code Liance",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
+      "Landing page para Code Liance, una empresa de desarrollo de software. Optimizada para SEO y rendimiento.",
+    link: "https://codeliance.netlify.app/",
     github: "https://github.com/pheralb/svgl",
     image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.FIGMA, TAGS.TAILWIND],
   },
   {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
